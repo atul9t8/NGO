@@ -1,0 +1,516 @@
+@import url("https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+.main {
+  width: 100%;
+  padding: 6% 10%;
+}
+
+.main .main-infos {
+  width: 100%;
+  text-align: center;
+}
+
+.main .main-infos h1 {
+  font-size: 3rem;
+  font-family: "Oswald", sans-serif;
+  text-transform: capitalize;
+  padding-bottom: 1%;
+  display: inline-block;
+  width: auto;
+}
+
+.main .main-infos h1:after {
+  content: "";
+  display: block;
+  border-bottom: 2px solid #00ff4e;
+  -webkit-animation: border-anime linear .8s;
+          animation: border-anime linear .8s;
+}
+
+.main .main-infos p {
+  font-family: "Crimson Text", serif;
+  width: 80%;
+  margin: 2rem auto;
+  line-height: 1.5rem;
+  letter-spacing: .9px;
+}
+
+.main .all-in {
+  height: 60rem;
+  position: relative;
+}
+
+.main .all-in .donate-img {
+  margin: 0 auto;
+  width: 50rem;
+  height: 30rem;
+}
+
+.main .all-in img {
+  height: 100%;
+  width: 100%;
+}
+
+.main .all-in form {
+  background-color: #ffffff;
+  -webkit-box-shadow: 5px 5px 10px #afafaf;
+          box-shadow: 5px 5px 10px #afafaf;
+  border-radius: 10px;
+  padding: 2% 2%;
+  width: 40rem;
+  height: auto;
+  position: absolute;
+  top: 25rem;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.main .all-in form h3 {
+  font-family: "Oswald", sans-serif;
+  text-align: center;
+  margin-bottom: 3rem;
+  border-bottom: 1px solid #afafaf;
+}
+
+.main .all-in form .change-h1:after {
+  content: " ";
+  -webkit-animation: text 10s infinite linear;
+          animation: text 10s infinite linear;
+}
+
+@-webkit-keyframes text {
+  0% {
+    content: "Help Children Rise Out Of Poverty";
+  }
+  20% {
+    content: "You Can Gives Children Clean Water";
+  }
+  40% {
+    content: "Help People To Find Their Smiles";
+  }
+  60% {
+    content: "Little Helps Comes Bigger";
+  }
+  80% {
+    content: "Help To Educate in Rular Area";
+  }
+  100% {
+    content: "Give A Hand To Make Better World";
+  }
+}
+
+@keyframes text {
+  0% {
+    content: "Help Children Rise Out Of Poverty";
+  }
+  20% {
+    content: "You Can Gives Children Clean Water";
+  }
+  40% {
+    content: "Help People To Find Their Smiles";
+  }
+  60% {
+    content: "Little Helps Comes Bigger";
+  }
+  80% {
+    content: "Help To Educate in Rular Area";
+  }
+  100% {
+    content: "Give A Hand To Make Better World";
+  }
+}
+
+.main .all-in form .donate-amount .amount-infos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.main .all-in form .donate-amount .amount-infos .para {
+  padding: 0 1rem;
+  border: 2px solid #00ff4e;
+  font-size: 1.2rem;
+  font-family: "Crimson Text", serif;
+  border-radius: 35px;
+  cursor: pointer;
+  background: none;
+}
+
+.main .all-in form .donate-amount .amount-infos #para1, .main .all-in form .donate-amount .amount-infos #para2, .main .all-in form .donate-amount .amount-infos #para3, .main .all-in form .donate-amount .amount-infos #para4 {
+  display: block;
+}
+
+.main .all-in form .donate-amount .amount-infos #amount-input {
+  width: 12rem;
+  padding: 0 1rem;
+  border: 2px solid #00ff4e;
+  font-size: 1.2rem;
+  font-family: "Crimson Text", serif;
+  border-radius: 35px;
+  display: none;
+}
+
+.main .all-in form .donate-amount .amount-infos #para-btn {
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  background: #00ff4e;
+  color: white;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+  display: none;
+}
+
+.main .all-in form .donate-amount .amount-infos #para-btn:hover {
+  background: white;
+  color: #00ff4e;
+  -webkit-box-shadow: 0 5px 10px #00ff4e;
+          box-shadow: 0 5px 10px #00ff4e;
+}
+
+.main .all-in form .donate-amount .amount-infos #amount-input.active {
+  display: block;
+}
+
+.main .all-in form .donate-amount .amount-infos #para-btn.active {
+  display: block;
+}
+
+.main .all-in form .donate-amount .amount-infos #para1.inactive, .main .all-in form .donate-amount .amount-infos #para2.inactive, .main .all-in form .donate-amount .amount-infos #para3.inactive, .main .all-in form .donate-amount .amount-infos #para4.inactive {
+  display: none;
+}
+
+.main .all-in form hr {
+  margin: 2rem 0;
+}
+
+.main .all-in form .donate-method .donate-checkbox {
+  width: 65%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.main .all-in form .donate-method .donate-checkbox p {
+  font-family: "Crimson Text", serif;
+  font-weight: 600;
+}
+
+.main .all-in form .donor-info input {
+  height: 1.5rem;
+  padding: 0 .5rem;
+}
+
+.main .all-in form .donor-info input:focus {
+  outline: none !important;
+  border: 2px solid #00ff4e;
+}
+
+.main .all-in form .donor-info .donor-name {
+  width: 65%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: .6rem;
+}
+
+.main .all-in form .donor-info .donor-email {
+  margin-bottom: 2rem;
+}
+
+.main .all-in form .donor-info .donor-email input {
+  width: 65%;
+}
+
+.main .all-in form .last-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.main .all-in form .last-section .submit-btn {
+  width: 7rem;
+  height: 2rem;
+  border: none;
+  text-transform: uppercase;
+  background-color: #00ff4e;
+  color: white;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+  cursor: pointer;
+}
+
+.main .all-in form .last-section .submit-btn:hover {
+  background-color: white;
+  color: #00ff4e;
+  -webkit-box-shadow: 0 5px 10px #00ff4e;
+          box-shadow: 0 5px 10px #00ff4e;
+}
+
+.main .all-in form .last-section #return1 {
+  padding: 0 1rem;
+  border: none;
+  font-size: 1.2rem;
+  font-family: "Oswald", sans-serif;
+  background: #00ff4e;
+  color: darkblue;
+}
+
+.main .all-in form h4 {
+  font-family: "Oswald", sans-serif;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+@-webkit-keyframes border-anime {
+  from {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+  }
+  to {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+}
+
+@keyframes border-anime {
+  from {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+  }
+  to {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+}
+
+@media (max-width: 850px) {
+  .main .main-infos {
+    width: 100%;
+    text-align: center;
+  }
+  .main .main-infos h1 {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+  }
+  .main .main-infos p {
+    margin: .5rem auto;
+    width: 100%;
+  }
+  .main .all-in {
+    height: 47rem;
+    position: relative;
+  }
+  .main .all-in .infos .donate-img {
+    width: 32rem;
+    height: 19rem;
+  }
+  .main .all-in .infos img {
+    height: 100%;
+    width: 100%;
+  }
+  .main .all-in .infos form {
+    background-color: #ffffff;
+    -webkit-box-shadow: 5px 5px 10px #afafaf;
+            box-shadow: 5px 5px 10px #afafaf;
+    border-radius: 10px;
+    padding: 2% 2%;
+    width: 28rem;
+    height: auto;
+    position: absolute;
+    top: 15rem;
+  }
+  .main .all-in .infos form .donate-amount .amount-infos {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .main .all-in .infos form .donate-amount .amount-infos .para {
+    font-size: 1rem;
+  }
+  .main .all-in .infos form .donate-amount .amount-infos #para1, .main .all-in .infos form .donate-amount .amount-infos #para2, .main .all-in .infos form .donate-amount .amount-infos #para3, .main .all-in .infos form .donate-amount .amount-infos #para4 {
+    display: block;
+  }
+  .main .all-in .infos form .donate-amount .amount-infos #amount-input {
+    width: 8rem;
+    font-size: 1rem;
+  }
+  .main .all-in .infos form .donate-amount .amount-infos #para-btn {
+    font-size: 1rem;
+  }
+  .main .all-in .infos form hr {
+    margin: 2rem 0;
+  }
+  .main .all-in .infos form .donate-method .donate-checkbox {
+    width: 100%;
+  }
+  .main .all-in .infos form .donor-info input {
+    height: 1.5rem;
+    padding: 0 .5rem;
+  }
+  .main .all-in .infos form .donor-info input:focus {
+    outline: none !important;
+    border: 2px solid #00ff4e;
+  }
+  .main .all-in .infos form .donor-info .donor-name {
+    width: 95%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin-bottom: 1rem;
+  }
+  .main .all-in .infos form .donor-info .donor-email {
+    margin-bottom: 2rem;
+  }
+  .main .all-in .infos form .donor-info .donor-email input {
+    width: 95%;
+  }
+  .main .all-in .infos form .last-section #return1 {
+    padding: .3rem 1rem;
+    font-size: .9rem;
+  }
+  .main .all-in .infos form h4 {
+    font-size: .8rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .main .main-infos h1 {
+    font-size: 1.5rem;
+    margin-top: 2rem;
+  }
+  .main .main-infos p {
+    margin: .2rem auto;
+    width: 100%;
+    line-height: 1.2rem;
+    letter-spacing: normal;
+    font-size: .9rem;
+  }
+  .main .all-in {
+    height: 44rem;
+  }
+  .main .all-in .infos .donate-img {
+    width: 18rem;
+    height: 14rem;
+  }
+  .main .all-in .infos form {
+    background-color: #ffffff;
+    -webkit-box-shadow: 5px 5px 10px #afafaf;
+            box-shadow: 5px 5px 10px #afafaf;
+    border-radius: 10px;
+    padding: 1% 1%;
+    width: 16rem;
+    height: auto;
+    top: 10rem;
+  }
+  .main .all-in .infos form h3 {
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+  }
+  .main .all-in .infos form .donate-amount h4 {
+    margin-left: .5rem;
+  }
+  .main .all-in .infos form .donate-amount .amount-infos {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .main .all-in .infos form .donate-amount .amount-infos .para {
+    font-size: .7rem;
+    padding: 0 .3rem;
+  }
+  .main .all-in .infos form .donate-amount .amount-infos #amount-input {
+    width: 5rem;
+    font-size: .6rem;
+    padding: 0 .6rem;
+  }
+  .main .all-in .infos form .donate-amount .amount-infos #para-btn {
+    font-size: .7rem;
+  }
+  .main .all-in .infos form .donate-method h4 {
+    margin-left: .5rem;
+  }
+  .main .all-in .infos form .donate-method .donate-checkbox {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    font-size: .8rem;
+    margin-left: .5rem;
+  }
+  .main .all-in .infos form .donor-info h4 {
+    margin-left: .5rem;
+  }
+  .main .all-in .infos form .donor-info input {
+    height: 1.5rem;
+    padding: 0 .5rem;
+  }
+  .main .all-in .infos form .donor-info input:nth-child(1) {
+    margin-bottom: 1rem;
+  }
+  .main .all-in .infos form .donor-info .donor-name {
+    width: 90%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin-bottom: 1rem;
+    margin-left: 4.9%;
+  }
+  .main .all-in .infos form .donor-info .donor-name #fname {
+    margin-top: 1rem;
+  }
+  .main .all-in .infos form .donor-info .donor-email {
+    margin-bottom: .5rem;
+  }
+  .main .all-in .infos form .donor-info .donor-email input {
+    width: 90%;
+    margin-left: 4.9%;
+  }
+  .main .all-in .infos form .last-section #return1 {
+    padding: .5rem .8rem;
+    font-size: .7rem;
+    margin-right: .8rem;
+  }
+  .main .all-in .infos form .last-section .submit-btn {
+    width: 5rem;
+    cursor: pointer;
+    margin-left: .8rem;
+  }
+  .main .all-in .infos form .last-section h4 {
+    font-size: .8rem;
+  }
+}
+/*# sourceMappingURL=donate.css.map */

@@ -1,0 +1,424 @@
+@import url("https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  color: black;
+  font-family: "Oswald", sans-serif;
+}
+
+h3 {
+  font-family: "Oswald", sans-serif;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  font-size: 1.2rem;
+  line-height: 1.3rem;
+  font-family: "Crimson Text", serif;
+  color: #686868;
+}
+
+button {
+  width: 7rem;
+  height: 2rem;
+  border: none;
+  text-transform: uppercase;
+  background-color: #00ff4e;
+  color: white;
+  transition: all 0.4s;
+}
+button:hover {
+  font-size: 0.7rem;
+  background-color: white;
+  color: #00ff4e;
+  box-shadow: 0 5px 10px #00ff4e;
+}
+
+.container {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background-image: url("../img/old-guy.jpg");
+  background-size: cover;
+  padding: 5% 5%;
+}
+.container .cmain {
+  display: flex;
+  position: absolute;
+  top: 85%;
+  transform: translateY(-85%);
+}
+.container .cmain .cmain-infos h1 {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  color: black;
+  font-family: "Oswald", sans-serif;
+  letter-spacing: 0.5px;
+}
+.container .cmain .cmain-infos p {
+  width: 50%;
+  margin-bottom: 2rem;
+  color: #686868;
+}
+.container .cmain-infos span {
+  text-transform: uppercase;
+}
+
+.about {
+  width: 100%;
+  height: 90vh;
+  padding: 6% 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.about .about-infos p {
+  width: 80%;
+  margin-bottom: 3rem;
+}
+.about .about-infos .about-btn {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+.about .about-infos .about-btn button {
+  width: 11rem;
+}
+.about .about-infos .about-btn button:nth-child(1) {
+  margin-bottom: 1rem;
+  background: none;
+  border: 2px solid #00ff4e;
+  color: #00ff4e;
+}
+.about .about-infos .about-btn button:nth-child(1):hover {
+  border: none;
+  background-color: #00ff4e;
+  color: white;
+}
+.about .about-infos .about-btn button a:nth-child(2) {
+  color: #00ff4e;
+}
+.about .about-img {
+  height: 20rem;
+  width: 130rem;
+}
+.about .about-img img {
+  height: 100%;
+  width: 100%;
+  transition: box-shadow 1s;
+}
+.about .about-img img:hover {
+  box-shadow: 10px 15px 20px #00ff4e;
+}
+
+.blogs {
+  padding: 6% 10%;
+  width: 100%;
+}
+.blogs .bp {
+  width: 70%;
+  margin-bottom: 3rem;
+}
+.blogs .blogs-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.blogs .blogs-section .blog2 {
+  margin-right: 3.5%;
+  margin-left: 3.5%;
+}
+.blogs .blogs-section #blogs-info {
+  width: 31%;
+}
+.blogs .blogs-section #blogs-info .date {
+  font-size: 1rem;
+}
+.blogs .blog-img {
+  height: 13rem;
+  width: 20rem;
+  margin-bottom: 1rem;
+}
+.blogs img {
+  height: 100%;
+  width: 100%;
+}
+
+.volunteer {
+  width: 100%;
+  padding: 6% 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.volunteer .volunteer-info span {
+  text-transform: uppercase;
+  color: #00ff4e;
+}
+.volunteer .volunteer-info p {
+  margin-bottom: 2rem;
+}
+.volunteer .volunteer-info button {
+  width: 15rem;
+}
+.volunteer .volunteer-img {
+  height: 18rem;
+  width: 140rem;
+  margin-right: 4rem;
+}
+.volunteer img {
+  width: 100%;
+  height: 100%;
+  transition: box-shadow 0.5s;
+}
+.volunteer img:hover {
+  box-shadow: 10px 15px 20px #00ff4e;
+}
+
+.management {
+  width: 100%;
+  padding: 6% 10%;
+}
+.management .mp {
+  width: 70%;
+  margin-bottom: 2rem;
+}
+.management .mall-infos {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+}
+.management .mall-infos .management-infos:nth-child(2) {
+  margin-right: 2.6%;
+  margin-left: 2.6%;
+}
+.management .mall-infos .management-infos:nth-child(3) {
+  margin-right: 2.6%;
+}
+.management .mall-infos .management-infos {
+  width: 12rem;
+  text-align: center;
+  border: 2px solid #00ff4e;
+  border-radius: 5px;
+  transition: all 0.5s;
+}
+.management .mall-infos .management-infos:hover {
+  box-shadow: 5px 5px 5px #00ff4e;
+}
+.management .mall-infos .management-infos p {
+  text-align: center;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+.management .mall-infos .management-infos h3 {
+  margin-bottom: 0.1rem;
+}
+.management .mimg {
+  height: 12rem;
+  width: 9rem;
+  margin: 1rem auto;
+}
+.management .mimg img {
+  height: 100%;
+  width: 100%;
+}
+
+@media (max-width: 750px) {
+  h1 {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    color: black;
+    font-family: "Oswald", sans-serif;
+  }
+
+  .container {
+    background-image: url("../img/pold.jpg");
+    padding-bottom: 2%;
+  }
+  .container .cmain {
+    top: 80%;
+  }
+  .container .cmain .cmain-infos h1 {
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 3rem;
+  }
+  .container .cmain .cmain-infos p {
+    width: 90%;
+    margin-bottom: 1rem;
+    color: #dedede;
+  }
+  .container .cmain .cmain-infos button {
+    margin-top: 5%;
+  }
+
+  h3 {
+    font-family: "Oswald", sans-serif;
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    font-size: 1rem;
+    line-height: 1rem;
+    font-family: "Crimson Text", serif;
+    color: #686868;
+  }
+
+  .about {
+    flex-direction: column;
+  }
+  .about .about-infos p {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  .about .about-infos .about-btn {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+  }
+  .about .about-infos .about-btn button {
+    height: 1.5rem;
+    width: 6.5rem;
+    margin-bottom: 2rem;
+    font-size: 0.7rem;
+  }
+  .about .about-infos .about-btn button:nth-child(1) {
+    margin-bottom: 0.3rem;
+    background: none;
+    border: 2px solid #00ff4e;
+    color: #00ff4e;
+  }
+  .about .about-img {
+    height: 17rem;
+    width: 22rem;
+  }
+
+  .blogs .bp {
+    width: 100%;
+    margin-bottom: 1.5rem;
+  }
+  .blogs .blogs-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .blogs .blogs-section .blog1 {
+    margin-bottom: 2.5rem;
+  }
+  .blogs .blogs-section .blog2 {
+    margin-right: 1.5%;
+    margin-left: 1.5%;
+    margin-bottom: 2.5rem;
+  }
+  .blogs .blogs-section #blogs-info {
+    width: 100%;
+  }
+  .blogs .blogs-section #blogs-info .date {
+    font-size: 0.5rem;
+  }
+  .blogs .blog-img {
+    height: 10rem;
+    width: 17rem;
+  }
+  .blogs img {
+    height: 100%;
+    width: 100%;
+  }
+
+  .volunteer {
+    flex-direction: column;
+  }
+  .volunteer .volunteer-info p {
+    width: 100%;
+  }
+  .volunteer .volunteer-info button {
+    width: 9rem;
+    font-size: 0.7rem;
+  }
+  .volunteer .volunteer-img {
+    margin-left: 10%;
+    height: 15rem;
+    width: 35rem;
+    margin-right: 4rem;
+    margin-bottom: 2rem;
+  }
+  .volunteer img {
+    width: 100%;
+    height: 100%;
+    transition: box-shadow 0.5s;
+  }
+  .volunteer img:hover {
+    box-shadow: 10px 15px 20px #00ff4e;
+  }
+
+  .management .mp {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+  .management .mall-infos {
+    display: flex;
+    position: relative;
+    justify-content: space-around;
+  }
+  .management .mall-infos .management-infos {
+    text-align: center;
+    border: none;
+    transition: all 0.5s;
+  }
+  .management .mall-infos .management-infos:hover {
+    box-shadow: 5px 5px 5px #00ff4e;
+  }
+  .management .mall-infos .management-infos p {
+    text-align: center;
+    font-size: 0.7rem;
+  }
+  .management .mall-infos .management-infos h3 {
+    margin-bottom: 0.1rem;
+    font-size: 0.7rem;
+  }
+  .management .mimg {
+    height: 8rem;
+    width: 6rem;
+  }
+  .management .mimg img {
+    height: 100%;
+    width: 100%;
+  }
+}
+@media (max-width: 365px) {
+  p {
+    font-size: 0.8rem;
+  }
+
+  .volunteer .volunteer-img {
+    height: 13rem;
+    width: 18rem;
+  }
+
+  .management .mp {
+    width: 100%;
+  }
+  .management .mall-infos {
+    display: flex;
+    position: relative;
+    justify-content: space-around;
+  }
+  .management .mall-infos .management-infos:nth-child(4) {
+    display: none;
+  }
+  .management .mall-infos .mimg {
+    height: 6rem;
+    width: 5rem;
+  }
+}
+
+/*# sourceMappingURL=home.css.map */

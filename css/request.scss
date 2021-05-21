@@ -1,0 +1,63 @@
+@import "variables";
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.req-main{
+    width: 100%;
+    padding: 5% 10%;
+
+    h1{
+        font-family: $h1-font;
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+
+    .req-info{
+        padding: 1% 2%;
+        margin: 1rem auto;
+        display: flex;
+        justify-content: space-between;
+        width: 65%;
+        box-shadow: 5px 5px 20px rgb(214, 214, 214);
+        p{
+            font-family: $p-font;
+            font-size: 1.2rem;
+        }
+        a{
+            font-family: $h1-font;
+            color: black;
+            padding: 3px 8px;
+            background-color: $c1;
+        }
+    }
+}
+
+@media (max-width:950px){
+    .req-main{
+        padding: 8% 10%;
+        .req-info{
+            width: 90%;
+        }
+    }
+}
+@media (max-width:450px){
+    .req-main{
+        padding: 15% 10%;    
+        h1{
+            font-family: $h1-font;
+        }
+        .req-info{
+            padding: 2% 2%;
+            width: 100%;
+            p{
+                font-size: 1rem;
+            }
+            a{
+                font-size: .7rem;
+            }
+        }
+    }
+}

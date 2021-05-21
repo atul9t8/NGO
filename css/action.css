@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.req-main {
+  width: 100%;
+  padding: 8% 10%;
+}
+
+.req-main h1 {
+  font-family: "Oswald", sans-serif;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.req-main .req-info {
+  padding: 1% 2%;
+  margin: 1rem auto;
+  width: 50%;
+  -webkit-box-shadow: 5px 5px 20px #d6d6d6;
+          box-shadow: 5px 5px 20px #d6d6d6;
+}
+
+.req-main .req-info .userinfo .username {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.req-main .req-info .userinfo .email {
+  word-break: break-all;
+}
+
+.req-main .req-info .userinfo p {
+  font-family: "Oswald", sans-serif;
+}
+
+.req-main .req-info .userinfo p span {
+  font-family: "Crimson Text", serif;
+  font-size: 1.3rem;
+  color: #626262;
+}
+
+.req-main .req-info .rbtn {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.req-main .req-info .rbtn #btn {
+  width: 9rem;
+  height: 2rem;
+  font-size: 1rem;
+  letter-spacing: .5px;
+  font-family: "Oswald", sans-serif;
+  border: none;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.req-main .req-info .rbtn .approve-btn {
+  margin-bottom: 1rem;
+  background-color: #00ff4e;
+  color: black;
+  -webkit-transition: -webkit-box-shadow .3s;
+  transition: -webkit-box-shadow .3s;
+  transition: box-shadow .3s;
+  transition: box-shadow .3s, -webkit-box-shadow .3s;
+}
+
+.req-main .req-info .rbtn .approve-btn:hover {
+  -webkit-box-shadow: 5px 5px 5px #00ff4e;
+          box-shadow: 5px 5px 5px #00ff4e;
+  background-color: white;
+}
+
+.req-main .req-info .rbtn .delete-btn {
+  background-color: red;
+  color: black;
+  -webkit-transition: -webkit-box-shadow .3s;
+  transition: -webkit-box-shadow .3s;
+  transition: box-shadow .3s;
+  transition: box-shadow .3s, -webkit-box-shadow .3s;
+}
+
+.req-main .req-info .rbtn .delete-btn:hover {
+  -webkit-box-shadow: 5px 5px 5px red;
+          box-shadow: 5px 5px 5px red;
+  background-color: white;
+}
+
+@media (max-width: 950px) {
+  .req-main .req-info {
+    width: 80%;
+  }
+}
+
+@media (max-width: 450px) {
+  .req-main {
+    padding: 25% 10%;
+  }
+  .req-main .req-info {
+    width: 100%;
+  }
+  .req-main .req-info .userinfo p {
+    font-size: .8rem;
+  }
+  .req-main .req-info .userinfo p span {
+    font-size: 1rem;
+  }
+  .req-main .req-info .rbtn #btn {
+    width: 7rem;
+    font-size: .8rem;
+  }
+}
+/*# sourceMappingURL=action.css.map */

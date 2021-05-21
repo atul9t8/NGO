@@ -1,0 +1,165 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
+footer {
+  width: 100%;
+  position: relative;
+  padding: 5% 10%;
+  background-color: #00ce5f;
+}
+
+footer button {
+  width: 7rem;
+  height: 2rem;
+  border: none;
+  text-transform: uppercase;
+  background-color: #076fe6;
+  color: white;
+  -webkit-transition: all .4s;
+  transition: all .4s;
+}
+
+footer button:hover {
+  font-size: .7rem;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+}
+
+footer .main-footer {
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+footer .main-footer svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  fill: white;
+}
+
+footer .main-footer a {
+  text-decoration: none;
+  font-family: Lato, serif;
+  font-size: 1rem;
+  color: white;
+  text-transform: uppercase;
+}
+
+footer .main-footer .bar {
+  height: 150px;
+  width: 2px;
+  background-color: white;
+}
+
+footer .main-footer .links, footer .main-footer .company, footer .main-footer .chat {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+footer .main-footer .chat .social-links {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+footer .main-footer .chat .mail .msg {
+  width: 12rem;
+  height: 2rem;
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+  padding-left: 2%;
+}
+
+footer .main-footer .chat .mail .msg::-webkit-input-placeholder {
+  font-family: Lato, serif;
+  color: white;
+}
+
+footer .main-footer .chat .mail .msg:-ms-input-placeholder {
+  font-family: Lato, serif;
+  color: white;
+}
+
+footer .main-footer .chat .mail .msg::-ms-input-placeholder {
+  font-family: Lato, serif;
+  color: white;
+}
+
+footer .main-footer .chat .mail .msg::placeholder {
+  font-family: Lato, serif;
+  color: white;
+}
+
+footer .main-footer .chat .mail button {
+  margin-left: .5rem;
+}
+
+.new-p {
+  color: #e4e4e4;
+}
+
+@media (max-width: 750px) {
+  footer button {
+    width: 4rem;
+  }
+  footer .main-footer svg {
+    width: 1rem;
+    height: 1rem;
+    fill: white;
+  }
+  footer .main-footer a {
+    font-size: .5rem;
+  }
+  footer .main-footer .chat .mail {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  footer .main-footer .chat .mail .msg {
+    width: 8rem;
+    height: 1.5rem;
+    margin-bottom: 1rem;
+    padding-left: 2%;
+  }
+  footer .main-footer .chat .mail .msg::-webkit-input-placeholder {
+    font-size: .7rem;
+  }
+  footer .main-footer .chat .mail .msg:-ms-input-placeholder {
+    font-size: .7rem;
+  }
+  footer .main-footer .chat .mail .msg::-ms-input-placeholder {
+    font-size: .7rem;
+  }
+  footer .main-footer .chat .mail .msg::placeholder {
+    font-size: .7rem;
+  }
+  footer .main-footer .chat .mail button {
+    margin-left: 0;
+    font-size: .7rem;
+  }
+  .new-p {
+    font-size: .5rem;
+  }
+}
+/*# sourceMappingURL=footer.css.map */

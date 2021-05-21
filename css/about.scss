@@ -1,0 +1,238 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+@import "variables";
+@mixin flex(){
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main{
+  width: 100%;
+  //background-color: #076fe6;
+  padding: 10% 10%;
+
+  .about-info{
+    //background-color: #afafaf;
+    //z-index: -1;
+    text-align: center;
+    background: url("../img/people-eat.jpg");
+    height: 70vh;
+    //width: 100%;
+    background-size: cover;
+    color: white;
+    position: relative;
+    &:before{
+      content: " ";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0; left: 0;
+      background-color: #00244d;
+      opacity: .5;
+      //z-index: -1;
+    }
+
+    h1{
+      font-family: $h1-font;
+      display: inline-block;
+      width: auto;
+      position: relative;
+      font-size: 2.5rem;
+      margin-top: 10%;
+      &:after{
+        content: " ";
+        display: block;
+        border-bottom: 2px solid $c1;
+        animation: border .8s linear;
+      }
+    }
+    @keyframes border {
+      0%{
+        transform: scaleX(0);
+      }
+      100%{
+        transform: scaleX(1);
+      }
+    }
+    p{
+      width: 65%;
+      margin: 2rem auto;
+      line-height: 1.5rem;
+      letter-spacing:.9px;
+      font-size: 1.2rem;
+      margin-bottom: 5rem;
+      position: relative;
+      color: #c7c7c7;
+    }
+  }
+  .events{
+    .events-heading{
+      //width: 9.8rem;
+      //color: white;
+      margin-top: 4rem;
+      h3{
+        font-family: $h1-font;
+        font-size: 1.7rem;
+        margin-bottom: 4rem;
+        color: #949494;
+        &:after{
+          content: "";
+          border-bottom: 3px solid $c1;
+          border-radius: 50px;
+          display: block;
+          width: 3rem;
+          //padding-top: .5rem;
+        }
+      }
+    }
+    .single-event{
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      &:nth-child(3){
+        margin-bottom: 7rem;
+        margin-top: 7rem;
+      }
+      .event-infos{
+        //background-color: #00ff4e;
+        width: 50%;
+        h3{
+          font-family: $p-font;
+          font-size: 1.5rem;
+          margin-bottom: 1rem;
+          letter-spacing: 1px;
+          //font-weight: 800;
+          border-bottom: 1px solid #949494;
+
+        }
+        p{
+          line-height: 1.5rem;
+          letter-spacing:.9px;
+          font-size: 1rem;
+        }
+      }
+      .event-img{
+        width: 25rem;
+        height: 16rem;
+        box-shadow: 5px 5px 10px $c1;
+        img{
+          height: 100%;
+          width: 100%;
+        }
+      }
+    }
+  }
+  #projects{
+    #Projects-heading{
+      margin-top: 7rem;
+      h3{
+        float: right;
+      }
+    }
+    .single-project{
+      h3{
+        display: flex;
+        justify-content: flex-end;
+      }
+    }
+  }
+}
+
+
+@media (max-width: 950px) {
+  .main{
+    //width: 100%;
+    ////background-color: #076fe6;
+    //padding: 8% 10%;
+
+    .about-info{
+      margin-top: 2rem;
+      height: 50vh;
+      h1{
+        font-size: 2rem;
+      }
+      p{
+        width: 75%;
+        line-height: 1.2rem;
+        letter-spacing:.9px;
+        font-size: 1rem;
+        color: #d5d5d5;
+      }
+    }
+    .events{
+
+      .single-event{
+        flex-direction: column;
+        &:nth-child(3){
+          margin-bottom: 7rem;
+          margin-top: 7rem;
+        }
+        .event-infos{
+          width: 100%;
+          p{
+            margin-bottom: 2rem;
+          }
+        }
+        .event-img{
+          width: 35rem;
+          height: 20rem;
+        }
+      }
+    }
+    #projects{
+      #Projects-heading{
+        margin-top: 7rem;
+        h3{
+          float: right;
+        }
+      }
+      .single-project{
+        .event-img{
+          margin-bottom: 2rem;
+        }
+        h3{
+          display: flex;
+          justify-content: flex-end;
+        }
+        p{
+          margin-bottom: auto;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  .main{
+    .about-info{
+      margin-top: 2rem;
+      height: 40vh;
+      h1{
+        font-size: 1rem;
+      }
+      p{
+        width: 85%;
+        line-height: 1.2rem;
+        letter-spacing:.5px;
+      }
+    }
+    .events{
+      .single-event{
+        .event-infos{
+          width: 100%;
+          p{
+            margin-bottom: 2rem;
+          }
+        }
+        .event-img{
+          width: 18rem;
+          height: 14rem;
+        }
+      }
+    }
+  }
+}

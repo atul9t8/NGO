@@ -1,0 +1,247 @@
+@import url("https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.main {
+  width: 100%;
+  padding: 10% 10%;
+}
+
+.main .about-info {
+  text-align: center;
+  background: url("../img/people-eat.jpg");
+  height: 70vh;
+  background-size: cover;
+  color: white;
+  position: relative;
+}
+
+.main .about-info:before {
+  content: " ";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: #00244d;
+  opacity: .5;
+}
+
+.main .about-info h1 {
+  font-family: "Oswald", sans-serif;
+  display: inline-block;
+  width: auto;
+  position: relative;
+  font-size: 2.5rem;
+  margin-top: 10%;
+}
+
+.main .about-info h1:after {
+  content: " ";
+  display: block;
+  border-bottom: 2px solid #00ff4e;
+  -webkit-animation: border .8s linear;
+          animation: border .8s linear;
+}
+
+@-webkit-keyframes border {
+  0% {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+  }
+  100% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+}
+
+@keyframes border {
+  0% {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+  }
+  100% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+}
+
+.main .about-info p {
+  width: 65%;
+  margin: 2rem auto;
+  line-height: 1.5rem;
+  letter-spacing: .9px;
+  font-size: 1.2rem;
+  margin-bottom: 5rem;
+  position: relative;
+  color: #c7c7c7;
+}
+
+.main .events .events-heading {
+  margin-top: 4rem;
+}
+
+.main .events .events-heading h3 {
+  font-family: "Oswald", sans-serif;
+  font-size: 1.7rem;
+  margin-bottom: 4rem;
+  color: #949494;
+}
+
+.main .events .events-heading h3:after {
+  content: "";
+  border-bottom: 3px solid #00ff4e;
+  border-radius: 50px;
+  display: block;
+  width: 3rem;
+}
+
+.main .events .single-event {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.main .events .single-event:nth-child(3) {
+  margin-bottom: 7rem;
+  margin-top: 7rem;
+}
+
+.main .events .single-event .event-infos {
+  width: 50%;
+}
+
+.main .events .single-event .event-infos h3 {
+  font-family: "Crimson Text", serif;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  letter-spacing: 1px;
+  border-bottom: 1px solid #949494;
+}
+
+.main .events .single-event .event-infos p {
+  line-height: 1.5rem;
+  letter-spacing: .9px;
+  font-size: 1rem;
+}
+
+.main .events .single-event .event-img {
+  width: 25rem;
+  height: 16rem;
+  -webkit-box-shadow: 5px 5px 10px #00ff4e;
+          box-shadow: 5px 5px 10px #00ff4e;
+}
+
+.main .events .single-event .event-img img {
+  height: 100%;
+  width: 100%;
+}
+
+.main #projects #Projects-heading {
+  margin-top: 7rem;
+}
+
+.main #projects #Projects-heading h3 {
+  float: right;
+}
+
+.main #projects .single-project h3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+@media (max-width: 950px) {
+  .main .about-info {
+    margin-top: 2rem;
+    height: 50vh;
+  }
+  .main .about-info h1 {
+    font-size: 2rem;
+  }
+  .main .about-info p {
+    width: 75%;
+    line-height: 1.2rem;
+    letter-spacing: .9px;
+    font-size: 1rem;
+    color: #d5d5d5;
+  }
+  .main .events .single-event {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .main .events .single-event:nth-child(3) {
+    margin-bottom: 7rem;
+    margin-top: 7rem;
+  }
+  .main .events .single-event .event-infos {
+    width: 100%;
+  }
+  .main .events .single-event .event-infos p {
+    margin-bottom: 2rem;
+  }
+  .main .events .single-event .event-img {
+    width: 35rem;
+    height: 20rem;
+  }
+  .main #projects #Projects-heading {
+    margin-top: 7rem;
+  }
+  .main #projects #Projects-heading h3 {
+    float: right;
+  }
+  .main #projects .single-project .event-img {
+    margin-bottom: 2rem;
+  }
+  .main #projects .single-project h3 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  .main #projects .single-project p {
+    margin-bottom: auto;
+  }
+}
+
+@media (max-width: 450px) {
+  .main .about-info {
+    margin-top: 2rem;
+    height: 40vh;
+  }
+  .main .about-info h1 {
+    font-size: 1rem;
+  }
+  .main .about-info p {
+    width: 85%;
+    line-height: 1.2rem;
+    letter-spacing: .5px;
+  }
+  .main .events .single-event .event-infos {
+    width: 100%;
+  }
+  .main .events .single-event .event-infos p {
+    margin-bottom: 2rem;
+  }
+  .main .events .single-event .event-img {
+    width: 18rem;
+    height: 14rem;
+  }
+}
+/*# sourceMappingURL=about.css.map */

@@ -1,0 +1,516 @@
+@import "variables";
+@mixin flex(){
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+.main {
+  //height: 100%;
+  width: 100%;
+  //background-color: #ff00b0;
+  padding: $padding;
+  //position: relative;
+
+  .main-infos {
+    width: 100%;
+    text-align: center;
+    //display: flex;
+    //flex-direction: column;
+    h1 {
+      font-size: 3rem;
+      font-family: $h1-font;
+      text-transform: capitalize;
+      padding-bottom: 1%;
+      display: inline-block;
+      width: auto;
+
+      &:after {
+        content: "";
+        display: block;
+        border-bottom: 2px solid $c1;
+        animation: border-anime linear .8s;
+      }
+    }
+
+    p {
+      //position: absolute;
+      font-family: $p-font;
+      width: 80%;
+      margin: 2rem auto;
+      line-height: 1.5rem;
+      letter-spacing:.9px;
+    }
+  }
+
+  .all-in{
+    //background-color: #00ff4e;
+    height: 60rem;
+    position: relative;
+
+    .donate-img{
+      //background-color: #00244d;
+      margin: 0 auto;
+      width: 50rem;
+      height: 30rem;
+    }
+    img{
+      height: 100%;
+      width: 100%
+    }
+    form{
+      background-color: #ffffff;
+      box-shadow: 5px 5px 10px #afafaf;
+      border-radius: 10px;
+      padding: 2% 2%;
+      width: 40rem;
+      height: auto;
+      position: absolute;
+      //top: -200%;
+      top: 25rem;
+      left: 50%;
+      transform: translateX(-50%);
+      h3{
+        font-family: $h1-font;
+        text-align: center;
+        margin-bottom: 3rem;
+        border-bottom: 1px solid #afafaf;
+        //width: fit-content;
+        //margin-left: 25%;
+      }
+      .change-h1:after{
+        content: " ";
+        animation: text 10s infinite linear;
+      }
+      @keyframes text {
+        0%{
+          content: "Help Children Rise Out Of Poverty";
+        }
+        20%{
+          content: "You Can Gives Children Clean Water";
+        }
+        40%{
+          content: "Help People To Find Their Smiles";
+        }
+        60%{
+          content: "Little Helps Comes Bigger";
+        }
+        80%{
+          content: "Help To Educate in Rular Area";
+        }
+        100%{
+          content: "Give A Hand To Make Better World";
+        }
+
+      }
+      .donate-amount {
+        .amount-infos {
+          display: flex;
+          justify-content: space-around;
+          .para {
+            padding: 0 1rem;
+            border: 2px solid $c1;
+            font-size: 1.2rem;
+            font-family: $p-font;
+            //font-weight: 600;
+            border-radius: 35px;
+            cursor: pointer;
+            background: none;
+          }
+
+          #para1, #para2, #para3, #para4 {
+            display: block;
+          }
+
+          #amount-input {
+            width: 12rem;
+            padding: 0 1rem;
+            border: 2px solid $c1;
+            font-size: 1.2rem;
+            font-family: $p-font;
+            //font-weight: 600;
+            border-radius: 35px;
+            //cursor: pointer;
+            display: none;
+          }
+
+          #para-btn {
+            text-transform: uppercase;
+            font-size: 1.1rem;
+            background: $c1;
+            color: white;
+            transition: all .5s;
+            display: none;
+
+            &:hover {
+              background: white;
+              color: $c1;
+              box-shadow: 0 5px 10px $c1;
+            }
+          }
+
+          #amount-input.active {
+            display: block;
+          }
+
+          #para-btn.active {
+            display: block;
+          }
+
+          #para1.inactive, #para2.inactive, #para3.inactive, #para4.inactive {
+            display: none;
+          }
+        }
+      }
+      hr{
+        margin: 2rem 0;
+      }
+      .donate-method{
+        .donate-checkbox{
+          width: 65%;
+          display: flex;
+          justify-content: space-between;
+          p{
+            font-family: $p-font;
+            font-weight: 600;
+          }
+        }
+      }
+      .donor-info{
+        input{
+          height: 1.5rem;
+          padding: 0 .5rem;
+          &:focus{
+            outline: none !important;
+            border: 2px solid $c1;
+          }
+        }
+        .donor-name{
+          width: 65%;
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: .6rem;
+        }
+        .donor-email{
+          input{
+            width: 65%;
+
+          }
+          margin-bottom: 2rem;
+        }
+      }
+      .last-section{
+        display: flex;
+        justify-content: space-between;
+        .submit-btn{
+          width: 7rem;
+          height: 2rem;
+          border: none;
+          text-transform: uppercase;
+          background-color: $c1;
+          color: white;
+          transition: all .5s;
+          cursor: pointer;
+          &:hover{
+            background-color: white;
+            color: $c1;
+            box-shadow: 0 5px 10px $c1;
+          }
+        }
+        #return1{
+          padding: 0 1rem;
+          border: none;
+          font-size: 1.2rem;
+          font-family: $h1-font;
+          background: $c1;
+          color: darkblue;
+        }
+      }
+
+      h4{
+        font-family: $h1-font;
+        font-size: 1rem;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+}
+
+@keyframes border-anime {
+  from{
+    transform: scaleX(0);
+  }
+  to{
+    transform: scaleX(1);
+  }
+}
+
+@media (max-width: 850px) {
+  .main {
+    .main-infos {
+      width: 100%;
+      text-align: center;
+      //display: flex;
+      //flex-direction: column;
+      h1 {
+        font-size: 1.5rem;
+        margin-top: 1rem;
+      }
+
+      p {
+        margin: .5rem auto;
+        width: 100%;
+      }
+    }
+
+    .all-in {
+      //background-color: #00ff4e;
+      height: 47rem;
+      position: relative;
+
+      .infos {
+        .donate-img {
+          width: 32rem;
+          height: 19rem;
+        }
+
+        img {
+          height: 100%;
+          width: 100%
+        }
+
+        form {
+          background-color: #ffffff;
+          box-shadow: 5px 5px 10px #afafaf;
+          border-radius: 10px;
+          padding: 2% 2%;
+          width: 28rem;
+          height: auto;
+          position: absolute;
+          //top: -200%;
+          top: 15rem;
+          //left: 0%;
+          //transform: translateX(-50%);
+          .donate-amount {
+            .amount-infos {
+              display: flex;
+              justify-content: space-around;
+
+              .para {
+                font-size: 1rem;
+              }
+
+              #para1, #para2, #para3, #para4 {
+                display: block;
+              }
+
+              #amount-input {
+                width: 8rem;
+                //border: 2px solid $c1;
+                font-size: 1rem;
+              }
+
+              #para-btn {
+                font-size: 1rem;
+              }
+            }
+          }
+
+          hr {
+            margin: 2rem 0;
+          }
+
+          .donate-method {
+            .donate-checkbox {
+              width: 100%;
+            }
+          }
+
+          .donor-info {
+            input {
+              height: 1.5rem;
+              padding: 0 .5rem;
+
+              &:focus {
+                outline: none !important;
+                border: 2px solid $c1;
+              }
+            }
+
+            .donor-name {
+              width: 95%;
+              display: flex;
+              justify-content: space-between;
+              margin-bottom: 1rem;
+            }
+
+            .donor-email {
+              input {
+                width: 95%;
+              }
+
+              margin-bottom: 2rem;
+            }
+          }
+
+          .last-section {
+            #return1 {
+              padding: .3rem 1rem;
+              font-size: .9rem;
+            }
+          }
+
+          h4 {
+            font-size: .8rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .main {
+    .main-infos {
+      h1 {
+        font-size: 1.5rem;
+        margin-top: 2rem;
+      }
+
+      p {
+        margin: .2rem auto;
+        width: 100%;
+        line-height: 1.2rem;
+        letter-spacing: normal;
+        font-size: .9rem;
+      }
+    }
+
+    .all-in {
+      height: 44rem;
+
+      .infos {
+        .donate-img {
+          width: 18rem;
+          height: 14rem;
+        }
+
+        form {
+          background-color: #ffffff;
+          box-shadow: 5px 5px 10px #afafaf;
+          border-radius: 10px;
+          padding: 1% 1%;
+          width: 16rem;
+          height: auto;
+          top: 10rem;
+
+          h3 {
+            margin-bottom: 1.5rem;
+            font-size: 1rem;
+          }
+
+          .donate-amount {
+            h4 {
+              margin-left: .5rem;
+            }
+
+            .amount-infos {
+              display: flex;
+              justify-content: space-around;
+
+              .para {
+                font-size: .7rem;
+                padding: 0 .3rem;
+              }
+
+              #amount-input {
+                width: 5rem;
+                font-size: .6rem;
+                padding: 0 .6rem;
+              }
+
+              #para-btn {
+                font-size: .7rem;
+              }
+            }
+          }
+
+          .donate-method {
+            h4 {
+              margin-left: .5rem;
+            }
+
+            .donate-checkbox {
+              flex-direction: column;
+              font-size: .8rem;
+              margin-left: .5rem;
+            }
+          }
+
+          .donor-info {
+            h4 {
+              margin-left: .5rem;
+            }
+
+            input {
+              height: 1.5rem;
+              padding: 0 .5rem;
+
+              &:nth-child(1) {
+                margin-bottom: 1rem;
+              }
+            }
+
+            .donor-name {
+              width: 90%;
+              display: flex;
+              flex-direction: column;
+              justify-content: space-between;
+              margin-bottom: 1rem;
+              margin-left: 4.9%;
+              //margin-right: 5%;
+
+              #fname {
+                margin-top: 1rem;
+              }
+            }
+
+            .donor-email {
+              input {
+                width: 90%;
+                margin-left: 4.9%;
+              }
+
+              margin-bottom: .5rem;
+            }
+          }
+
+          .last-section {
+            #return1 {
+              padding: .5rem .8rem;
+              font-size: .7rem;
+              margin-right: .8rem;
+            }
+
+            .submit-btn {
+              width: 5rem;
+              cursor: pointer;
+              margin-left: .8rem;
+            }
+
+            h4 {
+              font-size: .8rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}

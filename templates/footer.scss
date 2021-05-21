@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+$p:Lato, serif;
+
+
+
+footer{
+  width: 100%;
+  position: relative;
+  padding: 5% 10%;
+  background-color: #00ce5f;
+  button{
+    width: 7rem;
+    height: 2rem;
+    border: none;
+    text-transform: uppercase;
+    background-color: rgb(7, 111, 230);
+    color: white;
+    transition: all .4s;
+    &:hover{
+      font-size: .7rem;
+      animation-duration: 1s;
+    }
+  }
+  .main-footer{
+    color:  white;
+
+    display: flex;
+    justify-content: space-between;
+    svg{
+      width: 1.5rem;
+      height: 1.5rem;
+      fill:white;
+    }
+    a{
+      text-decoration: none;
+      font-family: $p;
+      font-size: 1rem;
+      color:  white;
+      text-transform: uppercase;
+    }
+    .bar{
+      height: 150px;
+      width: 2px;
+      background-color: white;
+    }
+    .links, .company, .chat{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+    }
+    .chat{
+      .social-links{
+        // background-color: aqua;
+        width: 50%;
+        display: flex;
+        justify-content: space-between;
+      }
+      .mail{
+        .msg{
+          width: 12rem;
+          height: 2rem;
+          background-color: transparent;
+          border: 2px solid white;
+          color:  white;
+
+          padding-left: 2%;
+          &::placeholder{
+            font-family: $p;
+            color:white;
+          }
+        }
+        button{
+          margin-left: .5rem;
+        }
+      }
+    }
+  }
+}
+.new-p{
+  color: #e4e4e4;
+}
+@media (max-width: 750px) {
+  footer{
+    button{
+      width: 4rem;
+    }
+    .main-footer{
+      svg{
+        width: 1rem;
+        height: 1rem;
+        fill:white;
+      }
+      a{
+        font-size: .5rem;
+      }
+      .chat{
+        .mail{
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          .msg{
+            width: 8rem;
+            height: 1.5rem;
+            margin-bottom: 1rem;
+            padding-left: 2%;
+            &::placeholder{
+              font-size: .7rem;
+            }
+          }
+          button{
+            margin-left: 0;
+            font-size: .7rem;
+          }
+        }
+      }
+    }
+  }
+  .new-p{
+    font-size: .5rem;
+  }
+}

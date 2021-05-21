@@ -1,0 +1,113 @@
+@import "variables";
+@mixin flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.req-main{
+    width: 100%;
+    padding: 8% 10%;
+
+    h1{
+        font-family: $h1-font;
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+
+    .req-info{
+        padding: 1% 2%;
+        margin: 1rem auto;
+        width: 50%;
+        box-shadow: 5px 5px 20px rgb(214, 214, 214);
+        .userinfo{
+            .username{
+                margin-top: 2rem;
+                margin-bottom: 1rem;
+            }
+            .email{
+                word-break: break-all;
+            }
+            p{
+                font-family: $h1-font;
+                span{
+                    font-family: $p-font;
+                    font-size: 1.3rem;
+                    color: rgb(98, 98, 98);
+                }
+            }
+        }
+        .rbtn{
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+            display: flex;
+            flex-direction: column;
+
+            #btn{
+                width: 9rem;
+                height: 2rem;
+                font-size: 1rem;
+                letter-spacing: .5px;
+                font-family: $h1-font;
+                border: none;
+                cursor: pointer;
+                @include flex();
+            }
+            .approve-btn{
+                margin-bottom: 1rem;
+                background-color: $c1;
+                color: black;
+                transition: box-shadow .3s;
+                &:hover{
+                    box-shadow: 5px 5px 5px $c1;
+                    background-color: white;
+                }
+            }
+            .delete-btn{
+                background-color: red;
+                color: black;
+                transition: box-shadow .3s;
+
+                &:hover{
+                    box-shadow: 5px 5px 5px red;
+                    background-color: white;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:950px){
+.req-main{
+    .req-info{
+        width: 80%;
+    }
+}
+}
+@media (max-width:450px){
+    .req-main{
+        padding: 25% 10%;    
+        .req-info{
+            width: 100%;
+            .userinfo{
+                p{
+                    font-size: .8rem;
+                    span{
+                        font-size: 1rem;
+                    }
+                }
+            }
+            .rbtn{    
+                #btn{
+                    width: 7rem;
+                    font-size: .8rem;
+                }                
+            }
+        }
+    }
+}
